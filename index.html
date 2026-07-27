@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Visibility for Independent Real Estate Agents | YBoost Australia</title>
+<meta name="description" content="Vendors now ask ChatGPT and Gemini which agent to list with. YBoost shows independent Australian agents and agency owners what AI says about them in their suburb, and exactly what to fix on the website they control."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="YBoost"/>
+<meta property="og:locale" content="en_AU"/>
+<meta property="og:title" content="AI Visibility for Independent Real Estate Agents | YBoost Australia"/>
+<meta property="og:description" content="Vendors are asking AI who to list with. See what ChatGPT, Claude and Gemini say about your agency in your suburb, and what to fix on the website you control."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AI Visibility for Independent Real Estate Agents | YBoost Australia"/>
+<meta name="twitter:description" content="Vendors are asking AI who to list with. See what ChatGPT, Claude and Gemini say about your agency in your suburb, and what to fix on the website you control."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI visibility for real estate agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI visibility is how often AI assistants like ChatGPT, Claude and Gemini mention and recommend your agency when someone asks about real estate agents in your suburb. Vendors are already asking these questions. If your agency is not in the answer, you are not on the shortlist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do AI assistants keep recommending the big franchise brands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI models lean on volume: national websites, decades of press coverage and thousands of pages that mention the franchise name. That reflects how much has been written about a brand, not how well it sells homes in your suburb. Independent agents can close that gap because they control their own website, reviews and public profile, and can act on every fix without waiting on anyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I own my agency and my website. Why does that matter here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because most AI visibility fixes are website and content changes. A franchise agent has to route those through head office and a brand team. You can publish them the same day. YBoost is built for owners who can act on a recommendation this week, not next quarter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this just SEO with a new name?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are related but not the same. SEO is about ranking in a list of links. AI visibility is about being named in the answer itself. That depends on clear, consistent facts about your agency appearing in the sources AI assistants trust, which is a different job to chasing keywords and backlinks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI assistants does YBoost check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YBoost checks how ChatGPT, Claude, Gemini and Perplexity answer the questions vendors in your area actually ask, such as who the best agent in a suburb is or who to get an appraisal from."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need technical skills to act on the recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every recommendation is written in plain English. If you can edit your own website, or brief the person who does, you can make these changes."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root {
+    --surface: #0b1326;
+    --surface-lowest: #060d20;
+    --surface-low: #131b2e;
+    --surface-container: #171f33;
+    --surface-high: #222a3e;
+    --surface-variant: #2d3449;
+    --on-surface: #dbe2fd;
+    --on-surface-variant: #bdc9c2;
+    --primary: #8ef6cf;
+    --on-primary: #003829;
+    --tertiary: #adc6ff;
+    --crimson: #dc2626;
+    --error: #ffb4ab;
+    --online: #10b981;
+    --glass-bg: rgba(30, 41, 59, 0.4);
+    --glass-bg-hover: rgba(30, 41, 59, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --margin-desktop: 40px;
+    --container-max: 1440px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    overflow-x: hidden;
+}
+::selection { background: var(--primary); color: var(--on-primary); }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+img, svg { display: block; }
+
+.container { max-width: var(--container-max); margin: 0 auto; padding-left: var(--margin-desktop); padding-right: var(--margin-desktop); }
+
+.glass-card {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    transition: border-color .3s cubic-bezier(.4,0,.2,1), background .3s cubic-bezier(.4,0,.2,1);
+}
+.glass-card:hover {
+    border-color: rgba(142, 246, 207, 0.3);
+    background: var(--glass-bg-hover);
+}
+.crimson-glow { box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.4); }
+.primary-glow { box-shadow: 0 0 30px -5px rgba(142, 246, 207, 0.2); }
+
+.headline { font-size: 24px; line-height: 32px; letter-spacing: -0.01em; font-weight: 600; }
+.display { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; font-weight: 700; }
+.label-sm { font-size: 12px; line-height: 16px; letter-spacing: 0.05em; font-weight: 600; }
+.body-lg { font-size: 18px; line-height: 28px; font-weight: 400; }
+.muted { color: var(--on-surface-variant); }
+
+@media (min-width: 768px) { .display { font-size: 48px; line-height: 56px; } }
+
+/* ---------- Icons ---------- */
+.icon { width: 1em; height: 1em; fill: currentColor; flex-shrink: 0; }
+
+/* ---------- Header ---------- */
+header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: rgba(30, 41, 59, 0.6);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--glass-border);
+}
+.header-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 16px; padding-bottom: 16px;
+}
+.header-left { display: flex; align-items: center; gap: 32px; }
+.logo { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+nav.main-nav { display: none; align-items: center; gap: 24px; }
+@media (min-width: 768px) { nav.main-nav { display: flex; } }
+nav.main-nav a { color: var(--on-surface-variant); transition: color .2s; padding-bottom: 4px; }
+nav.main-nav a:hover { color: var(--on-surface); }
+nav.main-nav a.active { color: var(--primary); font-weight: 700; border-bottom: 2px solid var(--primary); }
+.header-actions { display: flex; align-items: center; gap: 16px; }
+.btn-ghost { color: var(--on-surface-variant); padding: 8px 16px; transition: color .2s, transform .1s; }
+.btn-ghost:hover { color: var(--on-surface); }
+.btn-ghost:active { transform: scale(.95); }
+.btn-crimson {
+    background: var(--crimson); color: #fff; font-weight: 700;
+    padding: 10px 24px; border-radius: 9999px;
+    transition: filter .2s, transform .1s;
+    box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.4);
+}
+.btn-crimson:hover { filter: brightness(1.1); }
+.btn-crimson:active { transform: scale(.95); }
+
+/* ---------- Hero ---------- */
+main { padding-top: 96px; }
+.hero { position: relative; padding-top: 80px; padding-bottom: 80px; overflow: hidden; }
+@media (min-width: 1024px) { .hero { padding-top: 128px; padding-bottom: 128px; } }
+.hero-grid { display: grid; gap: 64px; align-items: center; }
+@media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+.hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 4px 12px; border-radius: 9999px;
+    background: var(--surface-high); border: 1px solid var(--glass-border);
+    margin-bottom: 24px;
+}
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); animation: pulse-dot 2s infinite; }
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .5; transform: scale(1.1); }
+}
+.hero h1 { margin-bottom: 24px; }
+.hero h1 .accent { color: var(--crimson); }
+.hero p { margin-bottom: 40px; max-width: 576px; }
+.hero-ctas { display: flex; flex-direction: column; gap: 16px; }
+@media (min-width: 640px) { .hero-ctas { flex-direction: row; } }
+.btn-hero-primary {
+    padding: 16px 32px; background: var(--crimson); color: #fff; font-weight: 700;
+    border-radius: 9999px; font-size: 16px;
+    box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.4);
+    transition: filter .2s, transform .1s;
+}
+.btn-hero-primary:hover { filter: brightness(1.1); }
+.btn-hero-primary:active { transform: scale(.95); }
+.btn-hero-secondary {
+    padding: 16px 32px; border: 1px solid var(--glass-border); border-radius: 9999px;
+    font-weight: 700; font-size: 16px;
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    transition: background .2s, transform .1s;
+}
+.btn-hero-secondary:hover { background: rgba(45, 52, 73, 0.5); }
+.btn-hero-secondary:active { transform: scale(.95); }
+
+/* Dashboard mockup */
+.dash { border-radius: 12px; padding: 24px; position: relative; overflow: hidden; }
+.dash-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.dash-head .icon { font-size: 24px; color: var(--primary); }
+.dash-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+.dash-stat {
+    background: var(--surface-container); border: 1px solid var(--glass-border);
+    border-radius: 8px; padding: 24px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.dash-stat .num { font-size: 36px; line-height: 44px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
+.dash-stat .num.green { color: var(--primary); }
+.dash-stat .cap { font-size: 12px; letter-spacing: .1em; font-weight: 600; text-transform: uppercase; color: var(--on-surface-variant); }
+.dash-bar-track { height: 8px; width: 100%; background: var(--surface-container); border-radius: 9999px; overflow: hidden; margin-bottom: 16px; }
+.dash-bar-fill { height: 100%; width: 42%; background: var(--primary); transition: width 1s; }
+.dash-meta { display: flex; justify-content: space-between; margin-bottom: 16px; }
+.dash-meta .up { color: var(--primary); }
+.dash-avatars { display: flex; gap: 8px; }
+.dash-avatar {
+    width: 32px; height: 32px; border-radius: 50%; font-size: 12px;
+    background: var(--surface-container); border: 1px solid var(--glass-border);
+    display: flex; align-items: center; justify-content: center;
+}
+.dash-blob {
+    position: absolute; top: -80px; right: -80px; width: 256px; height: 256px;
+    background: rgba(220, 38, 38, 0.1); border-radius: 50%;
+    filter: blur(120px); pointer-events: none;
+}
+
+/* ---------- Sections ---------- */
+section { padding-top: 96px; padding-bottom: 96px; }
+.section-dark { background: rgba(6, 13, 32, 0.5); }
+.section-low { background: var(--surface-low); }
+.section-head { text-align: center; margin-bottom: 64px; }
+.section-head h2 { margin-bottom: 16px; }
+
+/* ---------- Problem ---------- */
+.problem-grid { display: grid; gap: 32px; align-items: center; }
+@media (min-width: 1024px) { .problem-grid { grid-template-columns: 1fr 1fr; } }
+.chat-card { padding: 32px; border-radius: 12px; border-left: 4px solid var(--error); }
+.chat-row { display: flex; align-items: flex-start; gap: 16px; }
+.chat-row + .chat-row { margin-top: 24px; }
+.chat-avatar {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.chat-avatar.user { background: rgba(142, 246, 207, 0.2); color: var(--primary); }
+.chat-avatar.bot { background: rgba(220, 38, 38, 0.2); color: var(--crimson); }
+.chat-bubble { background: var(--surface-variant); padding: 16px; border-radius: 16px; border-top-left-radius: 0; }
+.chat-bubble.answer { background: var(--surface-high); border: 1px solid var(--glass-border); }
+.chat-bubble.answer p { margin-bottom: 12px; }
+.chat-bubble ul { list-style: none; }
+.chat-bubble li { display: flex; align-items: center; gap: 8px; color: var(--on-surface-variant); }
+.chat-bubble li + li { margin-top: 8px; }
+.chat-bubble li .icon { font-size: 18px; color: var(--online); }
+.chat-bubble li.missing { color: var(--error); }
+.chat-bubble li.missing .icon { color: var(--error); }
+.chat-bubble li.missing span { font-style: italic; text-decoration: underline; text-decoration-color: rgba(255, 180, 171, 0.4); }
+.problem-copy h3 { color: var(--primary); margin-bottom: 24px; }
+.problem-copy > p { margin-bottom: 24px; line-height: 1.7; }
+.problem-stat { display: flex; align-items: center; gap: 16px; }
+.problem-stat + .problem-stat { margin-top: 16px; }
+.problem-stat .icon { font-size: 24px; color: var(--crimson); }
+
+/* ---------- Solution ---------- */
+.solution-grid { display: grid; gap: 32px; }
+@media (min-width: 768px) { .solution-grid { grid-template-columns: repeat(3, 1fr); } }
+.solution-card { padding: 40px; border-radius: 16px; text-align: center; }
+.solution-icon {
+    width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 24px;
+    display: flex; align-items: center; justify-content: center; font-size: 30px;
+    transition: background .3s;
+}
+.solution-icon.green { background: rgba(142, 246, 207, 0.1); color: var(--primary); }
+.solution-card:hover .solution-icon.green { background: rgba(142, 246, 207, 0.2); }
+.solution-icon.crimson { background: rgba(220, 38, 38, 0.1); color: var(--crimson); }
+.solution-card:hover .solution-icon.crimson { background: rgba(220, 38, 38, 0.2); }
+.solution-icon.online { background: rgba(16, 185, 129, 0.1); color: var(--online); }
+.solution-card:hover .solution-icon.online { background: rgba(16, 185, 129, 0.2); }
+.solution-card h4 { margin-bottom: 16px; }
+
+/* ---------- Features (bento) ---------- */
+.features-grid { display: grid; gap: 24px; }
+@media (min-width: 1024px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+.feature-card { padding: 32px; border-radius: 16px; position: relative; overflow: hidden; }
+.feature-card .icon { font-size: 40px; margin-bottom: 16px; }
+.feature-card h3 { margin-bottom: 16px; }
+.feature-card .content { position: relative; z-index: 1; }
+.feature-blob {
+    position: absolute; bottom: -40px; right: -40px; width: 160px; height: 160px;
+    border-radius: 50%; filter: blur(48px); pointer-events: none;
+}
+.feature-blob.green { background: rgba(142, 246, 207, 0.05); }
+.feature-blob.crimson { background: rgba(220, 38, 38, 0.05); }
+.feature-card.action {
+    background: linear-gradient(to bottom right, var(--surface-high), var(--surface-low));
+    border-color: rgba(142, 246, 207, 0.2);
+}
+.text-green { color: var(--primary); }
+.text-crimson { color: var(--crimson); }
+.text-blue { color: var(--tertiary); }
+.text-online { color: var(--online); }
+
+/* ---------- Snapshot form ---------- */
+.form-card { max-width: 896px; margin: 0 auto; padding: 48px; border-radius: 24px; position: relative; }
+@media (max-width: 640px) { .form-card { padding: 32px 24px; } }
+.form-head { text-align: center; margin-bottom: 40px; }
+.form-head h2 { margin-bottom: 16px; }
+.snapshot-form { display: grid; gap: 24px; }
+@media (min-width: 640px) { .snapshot-form { grid-template-columns: 1fr 1fr; } }
+.field label { display: block; margin-bottom: 8px; color: var(--on-surface-variant); }
+.field input {
+    width: 100%; font-family: inherit; font-size: 16px;
+    background: var(--surface-lowest); color: var(--on-surface);
+    border: 1px solid var(--glass-border); border-radius: 12px;
+    padding: 12px 16px; outline: none; transition: border-color .2s;
+}
+.field input::placeholder { color: rgba(189, 201, 194, 0.5); }
+.field input:focus { border-color: var(--primary); }
+.form-submit { padding-top: 16px; }
+@media (min-width: 640px) { .form-submit { grid-column: span 2; } }
+.form-submit button {
+    width: 100%; background: var(--crimson); color: #fff; font-weight: 700; font-size: 16px;
+    padding: 16px; border-radius: 12px; transition: filter .2s, transform .1s;
+}
+.form-submit button:hover { filter: brightness(1.1); }
+.form-submit button:active { transform: scale(.98); }
+
+/* ---------- FAQ ---------- */
+.faq-wrap { max-width: 768px; margin: 0 auto; }
+.faq-wrap h2 { text-align: center; margin-bottom: 64px; }
+.faq-item { border-radius: 12px; }
+.faq-item + .faq-item { margin-top: 16px; }
+.faq-item summary {
+    list-style: none; padding: 24px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 18px; font-weight: 600;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .icon { font-size: 24px; transition: transform .3s; }
+.faq-item[open] summary .icon { transform: rotate(180deg); }
+.faq-body { padding: 0 24px 24px; color: var(--on-surface-variant); }
+
+/* ---------- Footer ---------- */
+footer { background: var(--surface-lowest); border-top: 1px solid var(--glass-border); }
+.footer-inner {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    padding-top: 48px; padding-bottom: 48px; gap: 32px;
+}
+@media (min-width: 768px) {
+    .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; gap: 24px; }
+}
+.footer-brand .logo { color: var(--primary); }
+.footer-brand p { margin-top: 8px; max-width: 320px; color: var(--on-surface-variant); font-size: 12px; line-height: 18px; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; }
+.footer-links a { font-size: 12px; letter-spacing: .05em; font-weight: 600; color: var(--on-surface-variant); transition: color .2s; }
+.footer-links a:hover { color: var(--primary); }
+.footer-copy { font-size: 12px; color: var(--on-surface-variant); opacity: .8; }
+
+/* ---------- FAB ---------- */
+.fab {
+    position: fixed; bottom: 32px; right: 32px; z-index: 40;
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(30, 41, 59, 0.6);
+    -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+    border: 1px solid rgba(142, 246, 207, 0.4); color: var(--primary);
+    font-weight: 700; font-size: 16px;
+    padding: 16px 24px; border-radius: 9999px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: transform .2s;
+}
+.fab:hover { transform: scale(1.05); }
+.fab:active { transform: scale(.95); }
+.fab .icon { font-size: 20px; }
+.fab:hover .icon { animation: spin 1.2s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Fade-in ---------- */
+.fade-in { opacity: 0; transform: translateY(40px); transition: opacity 1s, transform 1s; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+    .fade-in { opacity: 1; transform: none; transition: none; }
+    .pulse-dot, .fab:hover .icon { animation: none; }
+}
+
+@media (max-width: 640px) {
+    .container { padding-left: 16px; padding-right: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-insights" viewBox="0 -960 960 960"><path d="m105-233-65-47 200-320 120 140 160-260 109 163q-23 1-43.5 5.5T545-539l-22-33-152 247-121-141-145 233ZM863-40 738-165q-20 14-44.5 21t-50.5 7q-75 0-127.5-52.5T463-317q0-75 52.5-127.5T643-497q75 0 127.5 52.5T823-317q0 26-7 50.5T795-222L920-97l-57 57ZM643-217q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm89-320q-19-8-39.5-13t-42.5-6l205-324 65 47-188 296Z"/></symbol>
+<symbol id="i-person" viewBox="0 -960 960 960"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></symbol>
+<symbol id="i-smart-toy" viewBox="0 -960 960 960"><path d="M160-120q-33 0-56.5-23.5T80-200v-320q0-33 23.5-56.5T160-600h40v-80q0-50 35-85t85-35h80v-40q0-25 17.5-42.5T460-900h40q25 0 42.5 17.5T560-840v40h80q50 0 85 35t35 85v80h40q33 0 56.5 23.5T880-520v320q0 33-23.5 56.5T800-120H160Zm200-260q25 0 42.5-17.5T420-440q0-25-17.5-42.5T360-500q-25 0-42.5 17.5T300-440q0 25 17.5 42.5T360-380Zm240 0q25 0 42.5-17.5T660-440q0-25-17.5-42.5T600-500q-25 0-42.5 17.5T540-440q0 25 17.5 42.5T600-380ZM320-280h320v-60H320v60Z"/></symbol>
+<symbol id="i-check-circle" viewBox="0 -960 960 960"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></symbol>
+<symbol id="i-cancel" viewBox="0 -960 960 960"><path d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56 56ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></symbol>
+<symbol id="i-troubleshoot" viewBox="0 -960 960 960"><path d="M480-80q-24 0-46-9t-39-26L26-484l56-58 368 370q6 6 14 9t16 3q8 0 16-3t14-9l368-370 58 56-370 371q-17 17-39 26t-47 9Zm0-800q24 0 46 9t39 26l369 369-57 57-368-368q-6-6-14-9t-15-3q-8 0-16 3t-14 9L82-419l-56-58 368-368q17-17 39-26t47-9Z"/></symbol>
+<symbol id="i-search-off" viewBox="0 -960 960 960"><path d="M240-80q-66 0-113-47T80-240q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113T240-80Zm584-40L568-376q-14 10-30 17.5t-33 13.5q-4-40-19.5-76T444-486q18-11 32.5-25.5T502-544q22-33 30-71.5t2-77.5q-11-64-60-105.5T360-840q-72 0-122 50t-50 122q0 34 12.5 65t35.5 55q-20 8-38.5 19T163-504q-27-33-41.5-74.5T107-664q6-98 78-167t175-69q104 0 177.5 73.5T611-649q0 44-15 84.5T552-491l272 272-56 55Z"/></symbol>
+<symbol id="i-query-stats" viewBox="0 -960 960 960"><path d="m105-233-65-47 200-320 120 140 160-260 109 163q-23 1-43.5 5.5T545-539l-22-33-152 247-121-141-145 233ZM863-40 738-165q-20 14-44.5 21t-50.5 7q-75 0-127.5-52.5T463-317q0-75 52.5-127.5T643-497q75 0 127.5 52.5T823-317q0 26-7 50.5T795-222L920-97l-57 57ZM643-217q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm89-320q-19-8-39.5-13t-42.5-6l205-324 65 47-188 296Z"/></symbol>
+<symbol id="i-compare" viewBox="0 -960 960 960"><path d="m320-160-56-57 103-103H80v-80h287L264-503l56-57 200 200-200 200Zm320-240L440-600l200-200 56 57-103 103h287v80H593l103 103-56 57Z"/></symbol>
+<symbol id="i-magic" viewBox="0 -960 960 960"><path d="m176-120-56-56 301-302-181-45 198-123-17-234 179 151 216-88-87 217 151 178-234-16-124 198-45-181-301 301Zm24-521-89-85 120-3 43-113 43 113 120 3-89 85 26 118-100-64-100 64 26-118Zm355 331 27-118-89-85 120-2 43-113 43 113 120 2-89 85 27 118-101-63-101 63Z"/></symbol>
+<symbol id="i-analytics" viewBox="0 -960 960 960"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Z"/></symbol>
+<symbol id="i-radar" viewBox="0 -960 960 960"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763l-57 57q-44-44-101-69t-125-25q-134 0-227 93t-93 227q0 134 93 227t227 93q134 0 227-93t93-227q0-45-11.5-86T766-524l58-58q27 45 41.5 96T880-380q-8 125-93.5 212.5T480-80Zm0-160q-100 0-170-70t-70-170q0-100 70-170t170-70q42 0 80 13.5t68 38.5l-57 58q-20-14-43-22t-48-8q-66 0-113 47t-47 113q0 66 47 113t113 47q66 0 113-47t47-113q0-8-1-15.5t-3-15.5l65-65q9 23 14 46.5t5 49.5q0 100-70 170t-170 70Zm0-160q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q7 0 13.5 1t12.5 4l100-101 57 57-101 100q3 6 4 12.5t1 13.5q1 33-22.5 53T480-400Z"/></symbol>
+<symbol id="i-source" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm200-120h320v-80H360v80Zm0-160h320v-80H360v80Z"/></symbol>
+<symbol id="i-bolt" viewBox="0 -960 960 960"><path d="m422-232 207-248H469l29-227-185 267h139l-30 208ZM320-80l40-280H160l360-520h80l-40 320h240L400-80h-80Z"/></symbol>
+<symbol id="i-expand-more" viewBox="0 -960 960 960"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></symbol>
+<symbol id="i-sparkle" viewBox="0 -960 960 960"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></symbol>
+</defs>
+</svg>
+
+<!-- Top nav -->
+<header>
+<div class="container header-inner">
+    <div class="header-left">
+        <span class="logo">YBoost</span>
+        <nav class="main-nav">
+            <a class="active" href="#">Product</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#features">What you get</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </div>
+    <div class="header-actions">
+        <button class="btn-ghost">Login</button>
+        <a class="btn-crimson" href="#check">Free AI check</a>
+    </div>
+</div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="hero">
+<div class="container hero-grid">
+    <div class="fade-in">
+        <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span class="label-sm muted">For agents who own their agency and their website</span>
+        </div>
+        <h1 class="display">Vendors are asking AI who to list with. <span class="accent">Make sure it says your name.</span></h1>
+        <p class="body-lg muted">YBoost shows you exactly how ChatGPT, Claude and Gemini describe your agency in your suburb, then gives you fixes you can make on your own website this week. No head office. No brand approvals. That is the whole point of owning your agency.</p>
+        <div class="hero-ctas">
+            <a class="btn-hero-primary" href="#check" style="display:inline-block;text-align:center;">Check my AI visibility</a>
+            <a class="btn-hero-secondary" href="#how-it-works" style="display:inline-block;text-align:center;">See how it works</a>
+        </div>
+    </div>
+    <div class="fade-in">
+        <div class="glass-card dash primary-glow">
+            <div class="dash-head">
+                <h3 class="headline">AI Visibility Score</h3>
+                <svg class="icon"><use href="#i-insights"/></svg>
+            </div>
+            <div class="dash-stats">
+                <div class="dash-stat">
+                    <span class="num green" id="score-num">0</span>
+                    <span class="cap">Out of 100</span>
+                </div>
+                <div class="dash-stat">
+                    <span class="num">18%</span>
+                    <span class="cap">Mention Rate</span>
+                </div>
+            </div>
+            <div class="dash-bar-track"><div class="dash-bar-fill"></div></div>
+            <div class="dash-meta label-sm muted">
+                <span>Recent Citations</span>
+                <span class="up">+12% this week</span>
+            </div>
+            <div class="dash-avatars">
+                <div class="dash-avatar">P</div>
+                <div class="dash-avatar">C</div>
+                <div class="dash-avatar">B</div>
+            </div>
+            <div class="dash-blob"></div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Problem -->
+<section class="section-dark" id="how-it-works">
+<div class="container">
+    <div class="section-head fade-in">
+        <h2 class="display">AI builds the shortlist before the first phone call</h2>
+        <p class="body-lg muted">And by default, it fills that shortlist with franchise names.</p>
+    </div>
+    <div class="problem-grid fade-in">
+        <div class="glass-card chat-card">
+            <div class="chat-row">
+                <div class="chat-avatar user"><svg class="icon"><use href="#i-person"/></svg></div>
+                <div class="chat-bubble">"Who is the best real estate agent in Hawthorn?"</div>
+            </div>
+            <div class="chat-row">
+                <div class="chat-avatar bot"><svg class="icon"><use href="#i-smart-toy"/></svg></div>
+                <div class="chat-bubble answer">
+                    <p>Several well-known agencies operate in Hawthorn:</p>
+                    <ul>
+                        <li><svg class="icon"><use href="#i-check-circle"/></svg> Ray White Hawthorn</li>
+                        <li><svg class="icon"><use href="#i-check-circle"/></svg> Jellis Craig</li>
+                        <li class="missing"><svg class="icon"><use href="#i-cancel"/></svg> <span>Your agency is missing here</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="problem-copy">
+            <h3 class="headline">The franchise default</h3>
+            <p class="muted">Don't take our word for it. Open ChatGPT right now and ask who the best real estate agent in your suburb is. If you are like most independents, you are not in the answer.</p>
+            <p class="muted">The models reel off the national brands because that is what they have read: decades of press, thousands of pages carrying the franchise name. It says nothing about who actually sells better in your patch.</p>
+            <p class="muted">Here is the part that works in your favour. A franchise agent who wants their website changed has to lodge a request and wait for head office. You own yours. Every fix YBoost finds is one you can make yourself, this week.</p>
+            <div class="problem-stat">
+                <svg class="icon"><use href="#i-troubleshoot"/></svg>
+                <span>Vendors are quietly asking ChatGPT and Gemini to shortlist agents before they ring anyone.</span>
+            </div>
+            <div class="problem-stat">
+                <svg class="icon"><use href="#i-search-off"/></svg>
+                <span>AI answers lean towards national franchise brands, even in suburbs where independents win more listings.</span>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Solution -->
+<section>
+<div class="container">
+    <div class="section-head fade-in">
+        <h2 class="display">Know exactly what AI says about you. Then change it.</h2>
+    </div>
+    <div class="solution-grid fade-in">
+        <div class="glass-card solution-card">
+            <div class="solution-icon green"><svg class="icon"><use href="#i-query-stats"/></svg></div>
+            <h4 class="headline">Measure</h4>
+            <p class="muted">See how ChatGPT, Claude, Gemini and Perplexity answer the questions vendors in your suburb actually ask, and whether you appear at all.</p>
+        </div>
+        <div class="glass-card solution-card">
+            <div class="solution-icon crimson"><svg class="icon"><use href="#i-compare"/></svg></div>
+            <h4 class="headline">Compare</h4>
+            <p class="muted">Benchmark yourself against the franchise offices in your patch and see exactly which sources are earning them the mention.</p>
+        </div>
+        <div class="glass-card solution-card">
+            <div class="solution-icon online"><svg class="icon"><use href="#i-magic"/></svg></div>
+            <h4 class="headline">Improve</h4>
+            <p class="muted">Get a prioritised list of fixes for your own website and profiles. Because you control the site, most can be live within days, not quarters.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Features bento -->
+<section class="section-low" id="features">
+<div class="container">
+    <div class="features-grid fade-in">
+        <div class="glass-card feature-card">
+            <div class="content">
+                <svg class="icon text-green"><use href="#i-analytics"/></svg>
+                <h3 class="headline">Your AI Visibility Score</h3>
+                <p class="muted">One number that tracks how often the major AI assistants mention and recommend your agency for your suburb, re-checked as the models update.</p>
+            </div>
+            <div class="feature-blob green"></div>
+        </div>
+        <div class="glass-card feature-card">
+            <div class="content">
+                <svg class="icon text-crimson"><use href="#i-radar"/></svg>
+                <h3 class="headline">Competitor share of voice</h3>
+                <p class="muted">See which offices AI names in your suburb, how often, and which reviews, articles and profiles are driving those mentions.</p>
+            </div>
+            <div class="feature-blob crimson"></div>
+        </div>
+        <div class="glass-card feature-card">
+            <div class="content">
+                <svg class="icon text-blue"><use href="#i-source"/></svg>
+                <h3 class="headline">The sources AI trusts</h3>
+                <p class="muted">Find the review sites, local news and property portals AI leans on for your area, so you know exactly where your name needs to appear.</p>
+            </div>
+        </div>
+        <div class="glass-card feature-card action">
+            <div class="content">
+                <svg class="icon text-online"><use href="#i-bolt"/></svg>
+                <h3 class="headline">Action Centre</h3>
+                <p class="muted">Plain-English fixes for your website and profiles, written for owners who make their own changes, not for agents who have to lodge a ticket with head office.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Snapshot form -->
+<section id="check">
+<div class="container">
+    <div class="glass-card form-card crimson-glow fade-in">
+        <div class="form-head">
+            <h2 class="headline" style="font-size:32px;line-height:40px;">See what AI says about your agency</h2>
+            <p class="body-lg muted">A free snapshot of how ChatGPT, Claude and Gemini describe you in your suburb, and where the franchise offices are beating you.</p>
+        </div>
+        <form class="snapshot-form" onsubmit="return false;">
+            <div class="field">
+                <label class="label-sm" for="f-name">Your Name</label>
+                <input id="f-name" type="text" placeholder="e.g. Sarah Chen"/>
+            </div>
+            <div class="field">
+                <label class="label-sm" for="f-suburb">Suburb / Primary Market</label>
+                <input id="f-suburb" type="text" placeholder="e.g. Hawthorn"/>
+            </div>
+            <div class="field">
+                <label class="label-sm" for="f-url">Your Agency Website (optional)</label>
+                <input id="f-url" type="url" placeholder="https://youragency.com.au"/>
+            </div>
+            <div class="field">
+                <label class="label-sm" for="f-email">Email Address</label>
+                <input id="f-email" type="email" placeholder="you@youragency.com.au"/>
+            </div>
+            <div class="form-submit">
+                <button type="submit">Show me what AI says about me</button>
+                <p class="label-sm muted" style="text-align:center;margin-top:12px;font-weight:400;">One report, no lock-in, no spam. We check the AI assistants, you keep the findings.</p>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section-dark" id="faq">
+<div class="container faq-wrap fade-in">
+    <h2 class="display">Frequently Asked Questions</h2>
+    <details class="glass-card faq-item" open>
+        <summary>
+            <span>What is AI visibility for real estate agents?</span>
+            <svg class="icon"><use href="#i-expand-more"/></svg>
+        </summary>
+        <div class="faq-body">AI visibility is how often AI assistants like ChatGPT, Claude and Gemini mention and recommend your agency when someone asks about real estate agents in your suburb. Vendors are already asking these questions. If your agency is not in the answer, you are not on the shortlist.</div>
+    </details>
+    <details class="glass-card faq-item">
+        <summary>
+            <span>Why do AI assistants keep recommending the big franchise brands?</span>
+            <svg class="icon"><use href="#i-expand-more"/></svg>
+        </summary>
+        <div class="faq-body">AI models lean on volume: national websites, decades of press coverage and thousands of pages that mention the franchise name. That reflects how much has been written about a brand, not how well it sells homes in your suburb. The gap is fixable, and independents are best placed to fix it, because they control their own website, reviews and public profile.</div>
+    </details>
+    <details class="glass-card faq-item">
+        <summary>
+            <span>I own my agency and my website. Why does that matter here?</span>
+            <svg class="icon"><use href="#i-expand-more"/></svg>
+        </summary>
+        <div class="faq-body">Because most AI visibility fixes are website and content changes. A franchise agent has to route those through head office and a brand team, which can take months or simply never happen. You can publish them the same day. YBoost is built for owners who can act on a recommendation this week, not next quarter.</div>
+    </details>
+    <details class="glass-card faq-item">
+        <summary>
+            <span>Is this just SEO with a new name?</span>
+            <svg class="icon"><use href="#i-expand-more"/></svg>
+        </summary>
+        <div class="faq-body">They are related but not the same. SEO is about ranking in a list of links. AI visibility is about being named in the answer itself. That depends on clear, consistent facts about your agency appearing in the sources AI assistants trust, which is a different job to chasing keywords and backlinks. Good news: the work you have already done on SEO usually helps, and nothing YBoost recommends will hurt your Google rankings.</div>
+    </details>
+    <details class="glass-card faq-item">
+        <summary>
+            <span>Which AI assistants does YBoost check?</span>
+            <svg class="icon"><use href="#i-expand-more"/></svg>
+        </summary>
+        <div class="faq-body">YBoost checks how ChatGPT, Claude, Gemini and Perplexity answer the questions vendors in your area actually ask, such as who the best agent in a suburb is, or who to get an appraisal from before selling.</div>
+    </details>
+    <details class="glass-card faq-item">
+        <summary>
+            <span>Do I need technical skills to act on the recommendations?</span>
+            <svg class="icon"><use href="#i-expand-more"/></svg>
+        </summary>
+        <div class="faq-body">No. Every recommendation is written in plain English. If you can edit your own website, or brief the person who does, you can make these changes. That is exactly why YBoost is built for agents who own their site rather than agents locked into a franchise template.</div>
+    </details>
+    <p class="body-lg muted" style="text-align:center;margin-top:48px;">Still wondering what AI says about you? <a href="#check" style="color:var(--primary);font-weight:600;">Run the free check</a> and find out in minutes.</p>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+<div class="container footer-inner">
+    <div class="footer-brand">
+        <span class="logo">YBoost</span>
+        <p>YBoost is an AI visibility platform for independent real estate agents and agency principals across Australia. It measures how ChatGPT, Claude, Gemini and Perplexity describe your agency in your local market, and shows you how to improve the answer.</p>
+    </div>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact</a>
+        <a href="#">LinkedIn</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 YBoost. All rights reserved.</div>
+</div>
+</footer>
+
+<!-- Floating action button -->
+<a class="fab" href="#check" aria-label="Run the free AI visibility check">
+    <svg class="icon"><use href="#i-sparkle"/></svg>
+    <span>Free AI Audit</span>
+</a>
+
+<script>
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Count-up for the visibility score
+function animateValue(el, start, end, duration) {
+    let startTs = null;
+    const step = (ts) => {
+        if (!startTs) startTs = ts;
+        const progress = Math.min((ts - startTs) / duration, 1);
+        el.textContent = Math.floor(progress * (end - start) + start);
+        if (progress < 1) window.requestAnimationFrame(step);
+    };
+    window.requestAnimationFrame(step);
+}
+const scoreEl = document.getElementById('score-num');
+if (scoreEl) setTimeout(() => animateValue(scoreEl, 0, 42, 2000), 500);
+
+</script>
+</body>
+</html>
