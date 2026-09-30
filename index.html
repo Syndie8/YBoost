@@ -349,27 +349,9 @@ h2 { font-size: clamp(32px, 4.6vw, 46px); line-height: 1.08; font-weight: 900; l
 .price-card:not(.featured) .btn:hover { background: rgba(255,255,255,0.06); }
 .pricing-note { text-align: center; font-family: var(--mono); font-size: 12px; color: var(--dim); max-width: 720px; margin: 36px auto 0; }
 
-/* Pricing: Superlines-style cards + comparison table */
+/* Pricing cards */
 .price-card h3 { font-size: 22px; font-weight: 800; margin: 0; }
 .price-card .price-tier { margin: 4px 0 20px; }
-.compare { margin-top: 48px; }
-.compare-head { text-align: center; margin-bottom: 28px; }
-.compare-head h3 { font-size: 28px; font-weight: 900; letter-spacing: -0.6px; }
-.compare-head p { color: var(--muted); margin-top: 8px; }
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
-.compare-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 14px; }
-.compare-table th, .compare-table td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-.compare-table thead th { position: sticky; top: 0; background: #0d1118; font-size: 15px; font-weight: 800; color: var(--text); }
-.compare-table thead th.hl { color: var(--cyan); }
-.compare-table tbody th { font-weight: 600; color: var(--text); width: 28%; }
-.compare-table td { color: var(--muted); width: 24%; }
-.compare-table td:nth-child(3) { background: rgba(0, 245, 255, 0.03); }
-.compare-table tr.grp th { padding-top: 26px; background: transparent; font-weight: 400; color: var(--dim); font-size: 13px; }
-.compare-table tr.grp th span { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cyan); margin-bottom: 2px; }
-.compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: 0; }
-.compare-table .yes .icon { width: 18px; height: 18px; color: var(--cyan); }
-.compare-table .no .icon { width: 16px; height: 16px; color: #3b4555; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Form */
 #check { position: relative; overflow: hidden; }
@@ -674,37 +656,6 @@ footer { border-top: 1px solid var(--border); background: var(--bg-raised); padd
             <a class="btn btn-cyan" href="#pricing-details" data-open>See package details</a>
         </article>
     </div>
-
-    <div class="compare reveal" id="compare">
-        <div class="table-wrap" tabindex="0" role="region" aria-label="Plan comparison table, scrolls sideways on small screens">
-            <table class="compare-table">
-                <thead><tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Free snapshot</th><th scope="col" class="hl">Monitoring</th><th scope="col">Report + fix pack</th></tr></thead>
-                <tbody>
-                <tr class="grp"><th scope="rowgroup" colspan="4"><span>Checks</span> How often, and how thoroughly, we ask AI about you.</th></tr>
-                <tr><th scope="row">AI engines</th><td>3</td><td>All AI engines</td><td>All AI engines</td></tr>
-                <tr><th scope="row">Vendor questions per check</th><td>Top 8 (quick check)</td><td>Full set</td><td>Full set</td></tr>
-                <tr><th scope="row">Checks every 30 days</th><td>1</td><td>Up to 8 per suburb</td><td>1, plus a re-check at 60 days</td></tr>
-                <tr><th scope="row">Automatic weekly check</th><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td><td><span class="yes"><svg class="icon" aria-label="Included"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td></tr>
-                <tr><th scope="row">Agents</th><td>1</td><td>1</td><td>1</td></tr>
-                <tr><th scope="row">Suburbs</th><td>1</td><td>1, then A$39/month each</td><td>1, then A$79 each</td></tr>
-                <tr class="grp"><th scope="rowgroup" colspan="4"><span>Insights</span> See where you stand and who is beating you.</th></tr>
-                <tr><th scope="row">AI Visibility Score</th><td><span class="yes"><svg class="icon" aria-label="Included"><use href="#i-check"/></svg></span></td><td><span class="yes"><svg class="icon" aria-label="Included"><use href="#i-check"/></svg></span></td><td><span class="yes"><svg class="icon" aria-label="Included"><use href="#i-check"/></svg></span></td></tr>
-                <tr><th scope="row">Your results</th><td>Dashboard + PDF snapshot</td><td>Dashboard</td><td>Written report</td></tr>
-                <tr><th scope="row">Rival agent comparison</th><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td><td>Up to 20 agents</td><td>Included in report</td></tr>
-                <tr><th scope="row">Weekly email of what changed</th><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td><td><span class="yes"><svg class="icon" aria-label="Included"><use href="#i-check"/></svg></span></td><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td></tr>
-                <tr class="grp"><th scope="rowgroup" colspan="4"><span>Action</span> Turn the findings into changes you can make.</th></tr>
-                <tr><th scope="row">Prioritised to-do list</th><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td><td><span class="yes"><svg class="icon" aria-label="Included"><use href="#i-check"/></svg></span></td><td><span class="yes"><svg class="icon" aria-label="Included"><use href="#i-check"/></svg></span></td></tr>
-                <tr><th scope="row">AI-drafted content</th><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td><td>Unlimited</td><td>3 drafts, ready to use</td></tr>
-                <tr><th scope="row">Vendor-pitch PDF</th><td>YBoost branded</td><td>With your logo</td><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td></tr>
-                <tr><th scope="row">Walkthrough call</th><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td><td><span class="no"><svg class="icon" aria-label="Not included"><use href="#i-x"/></svg></span></td><td>20 minutes</td></tr>
-                <tr class="grp"><th scope="rowgroup" colspan="4"><span>Billing</span> Simple, in Australian dollars, GST included.</th></tr>
-                <tr><th scope="row">Price</th><td>A$0</td><td>A$99/month</td><td>A$399 once (A$299 for the first five)</td></tr>
-                <tr><th scope="row">Commitment</th><td>None</td><td>Monthly</td><td>One-off</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <p class="pricing-note">All prices are in Australian dollars and include GST. Website work and ongoing content production are quoted separately. No plan can guarantee an AI mention, a ranking or a listing.</p>
 </div>
 </section>
 
