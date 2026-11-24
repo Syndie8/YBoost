@@ -219,6 +219,8 @@ header.scrolled { background: rgba(5, 7, 10, 0.82); backdrop-filter: blur(14px);
 .logo-mark { width: 30px; height: 30px; flex-shrink: 0; filter: drop-shadow(0 0 10px rgba(0,245,255,0.45)); }
 .main-nav { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
 .main-nav a:hover { color: var(--text); }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.header-login { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; font-size: 14px; }
 @media (max-width: 820px) { .main-nav { display: none; } }
 
 /* ---------- Hero ---------- */
@@ -440,9 +442,11 @@ footer { border-top: 1px solid var(--border); background: var(--bg-raised); padd
         <a href="#how-it-works">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#">Login</a>
     </nav>
-    <a class="btn btn-cyan btn-sm" href="#check">Free AI check</a>
+    <div class="header-actions">
+        <a class="header-login" href="https://app.yboost.com.au/auth/login">Login</a>
+        <a class="btn btn-cyan btn-sm" href="#check">Free AI check</a>
+    </div>
 </div>
 </header>
 
